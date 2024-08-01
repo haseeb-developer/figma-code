@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  --font-primary: "Big Shoulders Display", sans-serif;
+  --font-secondary: "Lexend Deca", sans-serif;
+  --color-primary: #e28625;
+  --color-secondary: #006971;
+  --color-tertiary: #004140;
+  --color-white: #fff;
+  --transition-duration: 0.3s;
+  --border-radius: 10px;
+  --button-width: 146px;
+  --button-height: 48px;
+  --button-radius: 45px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+.container {
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--color-primary);
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.item {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 307px;
+  height: 500px;
+  padding: 0 48px;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  transition: var(--transition-duration) ease-in-out;
+}
+
+.item__icon {
+  padding-top: 48px;
+}
+
+.item__title {
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--color-white);
+  margin-top: 35px;
+}
+
+.item__content {
+  font-family: var(--font-secondary);
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-white);
+  margin-top: 25px;
+  padding-right: 14px;
+}
+
+.item__button {
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: var(--button-radius);
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  margin-top: 83px;
+  background-color: var(--color-white);
+  border: none;
+  transition: var(--transition-duration) ease-in-out;
+}
+
+.item--sedans {
+  background-color: var(--color-primary);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.item--sedans .item__button {
+  color: var(--color-primary);
+}
+
+.item--suvs {
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+}
+
+.item--suvs .item__button {
+  color: var(--color-secondary);
+}
+
+.item--luxury {
+  background-color: var(--color-tertiary);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.item--luxury .item__button {
+  color: var(--color-tertiary);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .container {
+    background-color: transparent;
+  }
+  .item {
+    width: calc(50% - 20px);
+    height: auto;
+    padding-bottom: 48px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    width: calc(50% - 20px);
+    height: auto;
+    padding-bottom: 48px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    width: calc(100% - 20px);
+    height: auto;
+    padding-bottom: 48px;
+    margin: 10px;
+  }
+
+  .item__title {
+    font-size: 30px;
+  }
+
+  .item__content {
+    font-size: 12px;
+  }
+
+  .item__button {
+    width: 120px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Figma to HTML Practice</title>
+  </head>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+.container {
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #e28625;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.item {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 307px;
+  height: 500px;
+  padding: 0 48px;
+  background-color: #e28625;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.item__icon {
+  padding-top: 48px;
+}
+
+.item__title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #fff;
+  margin-top: 35px;
+}
+
+.item__content {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 25px;
+  padding-right: 14px;
+}
+
+.item__button {
+  width: 146px;
+  height: 48px;
+  border-radius: 45px;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+  margin-top: 83px;
+  background-color: white;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.item--sedans {
+  background-color: #e28625;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.item--sedans .item__button {
+  color: #e28625;
+}
+
+.item--suvs {
+  background-color: #006971;
+  border-radius: 10px;
+}
+
+.item--suvs .item__button {
+  color: #006971;
+}
+
+.item--luxury {
+  background-color: #004140;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.item--luxury .item__button {
+  color: #004140;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .container {
+    background-color: transparent;
+  }
+  .item {
+    width: calc(50% - 20px);
+    height: auto;
+    padding-bottom: 48px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    width: calc(50% - 20px);
+    height: auto;
+    padding-bottom: 48px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    width: calc(100% - 20px);
+    height: auto;
+    padding-bottom: 48px;
+    margin: 10px;
+  }
+
+  .item__title {
+    font-size: 30px;
+  }
+
+  .item__content {
+    font-size: 12px;
+  }
+
+  .item__button {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+
+  </style>
+  <body class="flex">
+    <section class="container flex">
+      <article class="item item--sedans flex">
+        <div class="item__icon">
+         [SVG Icon here]
+        </div>
+        <h2 class="item__title">SEDANS</h2>
+        <p class="item__content">
+          Choose a sedan for its affordability and excellent fuel economy. Ideal
+          for cruising in the city or on your next road trip.
+        </p>
+        <button class="item__button">Learn More</button>
+      </article>
+      <article class="item item--suvs flex">
+        <div class="item__icon">
+          [SVG Icon here]
+        </div>
+        <h2 class="item__title">SUVS</h2>
+        <p class="item__content">
+          Take an SUV for its spacious interior, power, and versatility. Perfect
+          for your next family vacation and off-road adventures.
+        </p>
+        <button class="item__button">Learn More</button>
+      </article>
+      <article class="item item--luxury flex">
+        <div class="item__icon">
+          [SVG Icon here]
+        </div>
+        <h2 class="item__title">LUXURY</h2>
+        <p class="item__content">
+          Cruise in the best car brands without the bloated prices. Enjoy the
+          enhanced comfort of a luxury rental and arrive in style.
+        </p>
+        <button class="item__button">Learn More</button>
+      </article>
+    </section>
+  </body>
+</html>
